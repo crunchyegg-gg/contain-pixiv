@@ -27,7 +27,6 @@
         "browser_style": true,
         "default_icon": "/img/px-icon-dark.svg",
         "default_title": "Pixiv Container",
-        "default_popup": "panel.html",
         "theme_icons": [
             {
                 "light": "/img/px-icon.svg",
