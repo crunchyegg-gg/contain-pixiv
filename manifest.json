@@ -1,0 +1,71 @@
+{
+    "manifest_version": 2,
+    "name": "Pixiv Container",
+    "version": "1.0.0",
+
+    "incognito": "not_allowed",
+
+    "default_locale": "en",
+
+    "description": "__MSG_extensionDescription__",
+
+    "icons": {
+        "48": "/img/icon.svg",
+        "96": "/img/icon.svg"
+    },
+
+    "applications": {
+      "gecko": {
+        "id": "@contain-pixiv",
+        "strict_min_version": "67.0"
+      }
+    },
+
+    "homepage_url": "https://github.com/crunchyegg-gg/contain-pixiv",
+
+    "browser_action": {
+        "browser_style": true,
+        "default_icon": "/img/px-icon-dark.svg",
+        "default_title": "Pixiv Container",
+        "default_popup": "panel.html",
+        "theme_icons": [
+            {
+                "light": "/img/px-icon.svg",
+                "dark": "/img/px-icon-dark.svg",
+                "size": 16
+            },
+            {
+                "light": "/img/px-icon.svg",
+                "dark": "/img/px-icon-dark.svg",
+                "size": 32
+            }
+        ]
+    },
+
+    "permissions": [
+        "<all_urls>",
+        "browsingData",
+        "contextualIdentities",
+        "cookies",
+        "management",
+        "storage",
+        "tabs",
+        "webRequestBlocking",
+        "webRequest"
+    ],
+
+    "background": {
+        "scripts": [
+          "psl.min.js",
+          "background.js"
+        ]
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content_script.js"],
+            "css": ["content_script.css"]
+        }
+    ]
+}
