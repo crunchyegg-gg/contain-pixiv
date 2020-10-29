@@ -480,7 +480,7 @@ async function areAllStringsTranslated () {
 }
 */
 
-async function updateBrowserActionIcon (tab) {
+/* async function updateBrowserActionIcon (tab) {
 
   browser.browserAction.setBadgeText({text: ""});
 
@@ -508,7 +508,7 @@ async function updateBrowserActionIcon (tab) {
       browser.browserAction.setBadgeText({text: "!"});
     }
   }
-}
+} */
 
 async function containPixiv (request) {
   if (tabsWaitingToLoad[request.tabId]) {
@@ -524,7 +524,7 @@ async function containPixiv (request) {
   }
 
   const tab = await browser.tabs.get(request.tabId);
-  updateBrowserActionIcon(tab);
+  // updateBrowserActionIcon(tab);
 
   const url = new URL(request.url);
   const urlSearchParm = new URLSearchParams(url.search);
